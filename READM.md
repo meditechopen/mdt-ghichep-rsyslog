@@ -1,1 +1,0 @@
-# Các ghi chép về RSyslog
