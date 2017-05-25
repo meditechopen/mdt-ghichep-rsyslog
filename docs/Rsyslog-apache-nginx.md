@@ -102,7 +102,7 @@ sed -i '/#CustomLog */ s/\${APACHE_LOG_DIR}\/access.log/"\| \/usr\/bin\/logger -
 echo -e "*.* @192.168.100.141" >> /etc/rsyslog.d/50-default.conf
 ```
 
-**Lưu ý:** Thay thế địa chỉ IP của rsyslog của bạn.
+**Lưu ý:** Thay thế địa chỉ IP rsyslog của bạn vào câu lệnh.
 
 Sau đó khởi động lại `apache2` và `rsyslog`
 
@@ -159,7 +159,7 @@ sed -i '/access_log */ s/\/var\/log\/nginx\/access.log  main/syslog:server=192.1
 echo -e "*.* @192.168.100.141" >> /etc/rsyslog.conf
 ```
 
-**Lưu ý:** Thay thế địa chỉ IP của rsyslog của bạn ở 2 câu lệnh trên.
+**Lưu ý:** Thay thế địa chỉ IP rsyslog của bạn vào 2 câu lệnh trên.
 
 Sau đó khởi động lại `nginx` và `rsyslog`
 
