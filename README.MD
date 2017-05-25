@@ -6,5 +6,5 @@ Các bạn quan tâm đến lý thuyết về Rsyslog, vui lòng tham khảo bà
 
 ### 2. Phần thực hành
 
-- Thực hành về [Rsyslog](docs/Rsyslog-apache-nginx.MD)
+- Thực hành về [Rsyslog](docs/Rsyslog-apache-nginx.md)
 - Thực hành về [Graylog](#)
