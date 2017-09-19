@@ -99,7 +99,7 @@ sed -i '/#CustomLog */ s/\${APACHE_LOG_DIR}\/access.log/"\| \/usr\/bin\/logger -
 - **Bước 2**: Cấu hình `rsyslog`:
 
 ```
-echo -e "*.* @192.168.100.141" >> /etc/rsyslog.d/50-default.conf
+echo -e "*.* @192.168.100.139" >> /etc/rsyslog.d/50-default.conf
 ```
 
 **Lưu ý:** Thay thế địa chỉ IP rsyslog của bạn vào câu lệnh.
@@ -150,13 +150,13 @@ sed -i '/SELINUX=enforcing/ s/enforcing/disabled/' /etc/selinux/config
 - **Bước 1**: Chỉnh sửa file cấu hình của `nginx`:
 
 ```
-sed -i '/access_log */ s/\/var\/log\/nginx\/access.log  main/syslog:server=192.168.100.141,facility=local2,tag=nginx_access,severity=info combined/' /etc/nginx/nginx.conf
+sed -i '/access_log */ s/\/var\/log\/nginx\/access.log  main/syslog:server=192.168.100.139,facility=local2,tag=nginx_access,severity=info combined/' /etc/nginx/nginx.conf
 ```
 
 - **Bước 2**: Cấu hình `rsyslog`:
 
 ```
-echo -e "*.* @192.168.100.141" >> /etc/rsyslog.conf
+echo -e "*.* @192.168.100.139" >> /etc/rsyslog.conf
 ```
 
 **Lưu ý:** Thay thế địa chỉ IP rsyslog của bạn vào 2 câu lệnh trên.
